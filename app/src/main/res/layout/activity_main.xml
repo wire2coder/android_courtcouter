@@ -6,7 +6,6 @@
 
 
     <TextView
-        android:id="@+id/team_a_score"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -15,6 +14,7 @@
         />
 
     <TextView
+        android:id="@+id/team_a_score"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -23,6 +23,7 @@
         />
 
     <Button
+        android:id="@+id/button_three_points"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -34,6 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="+2 Points"
+        android:id="@+id/button_two_points"
         />
 
     <Button
@@ -41,6 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="Free throw"
+        android:id="@+id/button_free_throw"
         />
 
 </LinearLayout>
