@@ -10,7 +10,8 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     // Global variables
-    int scoreTeamA = 0;
+    int scoreTeamA, scoreTeamB = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +24,31 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void resetScores(View v) {
+        scoreTeamA =0;
+        scoreTeamB = 0;
 
+        displayForTeamB(scoreTeamB);
+        displayForTeamA(scoreTeamA);
+    }
+
+    public void addThreeForTeamB(View v) {
+        scoreTeamB = scoreTeamB + 3;
+
+        displayForTeamB(scoreTeamB);
+    }
+
+    public void addTwoForTeamB(View v) {
+        scoreTeamB = scoreTeamB + 2;
+
+        displayForTeamB(scoreTeamB);
+    }
+
+    public void addOneForTeamB(View v) {
+        scoreTeamB = scoreTeamB + 1;
+
+        displayForTeamB(scoreTeamB);
+    }
 
     public void addThreeForTeamA(View v) {
         scoreTeamA = scoreTeamA + 3;
@@ -46,6 +71,12 @@ public class MainActivity extends AppCompatActivity {
     /* Display the given score for Team A */
     public void displayForTeamA(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team_a_score);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    public void displayForTeamB(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
+        // convert the integer value into string value
         scoreView.setText(String.valueOf(score));
     }
 
